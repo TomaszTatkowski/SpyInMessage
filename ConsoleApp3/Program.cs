@@ -1,26 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp3
 {
     public class SpyInMessage
     {
 
-        public static int[] message;
-        public static int[] spy;
-
-        static void Main(String[] args)
+static void Main(String[] args)
         {
             SpyInMessage spyInMessage = new SpyInMessage();
 
-            message = spyInMessage.getMessage();
-            spy = spyInMessage.getSpy();
+            int[] message = spyInMessage.getMessage();
+            int[] spy = spyInMessage.getSpy();
 
 
-            if (spyInMessage.isSpyInMessage(spy))
+            if (spyInMessage.isSpyInMessage(message, spy))
             {
                 Console.WriteLine("Message does contain the spy: ");
                 foreach (int item in spy)
@@ -39,7 +32,7 @@ namespace ConsoleApp3
             Console.WriteLine("Enter massage(e.g. 000000...): ");
             String messageString = Console.ReadLine();
             Char[] messageCharArr = messageString.ToCharArray();
-            return setArray(messageCharArr, message);
+            return setArray(messageCharArr);
         }
 
         public int[] getSpy()
@@ -53,12 +46,12 @@ namespace ConsoleApp3
                 spyString = Console.ReadLine();
                 spyCharArr = spyString.ToCharArray();
             }
-            return setArray(spyCharArr, spy);
+            return setArray(spyCharArr);
         }
 
-        public int[] setArray(Char[] messageCharArr, int[] array)
+        public int[] setArray(Char[] messageCharArr)
         {
-            array = new int[messageCharArr.Length];
+            int[] array = new int[messageCharArr.Length];
 
             for (int i = 0; i < messageCharArr.Length; i++)
             {
@@ -70,7 +63,7 @@ namespace ConsoleApp3
             return array;
         }
 
-        public Boolean isSpyInMessage(int[] spyCode)
+        public Boolean isSpyInMessage(int[] message, int[] spyCode)
         {
             int i;
 
