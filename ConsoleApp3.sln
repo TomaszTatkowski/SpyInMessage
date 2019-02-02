@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp3", "ConsoleApp3\ConsoleApp3.csproj", "{A750549A-D678-4468-BBC9-C6CBB50A30C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpyInMessage", "ConsoleApp3\SpyInMessage.csproj", "{A750549A-D678-4468-BBC9-C6CBB50A30C9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpyInMessageTest", "SpyInMessageTest\SpyInMessageTest.csproj", "{EF141036-F76F-451C-B8FC-BA539768A32B}"
 EndProject
