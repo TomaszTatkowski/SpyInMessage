@@ -67,23 +67,21 @@ static void Main(String[] args)
         {
             int i;
 
-            for (i = 0; i < message.Length; i++)
-            {
-                if (message[i] == spyCode[0] && i < message.Length - 1)
-                {
+            for (i = 0; i < message.Length; i++){
 
-                    for (i += 1; i < message.Length; i++)
-                    {
-                        if (message[i] == spyCode[1] && i < message.Length - 1)
-                        {
+                if (message[i] == spyCode[0] && i < message.Length - 1) {
 
-                            for (i += 1; i < message.Length; i++)
-                            {
-                                if (message[i] == spyCode[2])
-                                {
+                    for (i += 1; i < message.Length; i++) {
+
+                        if (message[i] == spyCode[1] && i < message.Length - 1) {
+
+                            for (i += 1; i < message.Length; i++) {
+
+                                if (message[i] == spyCode[2]) {
+
                                     return true;
-                                }
 
+                                }
                             }
                         }
                     }
